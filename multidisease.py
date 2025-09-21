@@ -15,7 +15,7 @@ with st.sidebar:
                          ["Diabetese Prediction",
                           "Heart Attack Prediction",
                           "Calories Burnt Prediction"],
-                         icons=['activity','heart','person-arms-up'],
+                         icons=['activity','heart','person-walking'],
                          default_index=0)
 #default_index denotes at what index does the page load with, if 0 then Diabetese, if 1 then heart attack, if 2 then calories will be selected by default when loading the page
 
@@ -132,6 +132,7 @@ if (selected=='Calories Burnt Prediction'):
     st.success(calories_result)  
     st.markdown('**NOTE:** You can generate other sameple data using ChatGpt, Gemini or other preffered AI apps.')    
        
+
 
 
 
