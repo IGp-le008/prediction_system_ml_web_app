@@ -2,25 +2,10 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-
-# Base path for relative file loading
-base_path = os.path.dirname(__file__)
-
-# Load models
-def load_model(filename):
-    file_path = os.path.join(base_path, filename)
-    with open(file_path, "rb") as file:
-        return pickle.load(file)
-
-calories_model = load_model("calories_burnt_trained_model.sav")
-heart_model = load_model("heart_attack_trained_model.sav")
-diabetes_model = load_model("diabetese_trained_model.sav")
-
-
-# #Loading the saved model
-# calories_model=pickle.load(open("F:/nn-clg/programming/Anaconda/Multiple Desease Prediciton/calories_burnt_trained_model.sav","rb"))
-# diabetese_model=pickle.load(open("F:/nn-clg/programming/Anaconda/Multiple Desease Prediciton/diabetese_trained_model.sav","rb"))
-# heartAttack_model=pickle.load(open("F:/nn-clg/programming/Anaconda/Multiple Desease Prediciton/heart_attack_trained_model.sav","rb"))
+#Loading the saved model
+calories_model=pickle.load(open("calories_burnt_trained_model.sav","rb"))
+diabetese_model=pickle.load(open("diabetese_trained_model.sav","rb"))
+heartAttack_model=pickle.load(open("heart_attack_trained_model.sav","rb"))
 
 
 
@@ -148,5 +133,6 @@ if (selected=='Calories Burnt Prediction'):
     st.success(calories_result)  
     st.markdown('**NOTE:** You can generate other sameple data using ChatGpt, Gemini or other preffered AI apps.')    
        
+
 
 
