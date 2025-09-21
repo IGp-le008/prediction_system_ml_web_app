@@ -3,9 +3,9 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 #Loading the saved model
-calories_model=pickle.load(open("prediction_system_ml_app/calories_burnt_trained_model.sav","rb"))
-diabetese_model=pickle.load(open("prediction_system_ml_app/diabetese_trained_model.sav","rb"))
-heartAttack_model=pickle.load(open("prediction_system_ml_app/heart_attack_trained_model.sav","rb"))
+calories_model=pickle.load(open("prediction_system_ml_app\calories_burnt_trained_model.sav","rb"))
+diabetese_model=pickle.load(open("prediction_system_ml_app\diabetese_trained_model.sav","rb"))
+heartAttack_model=pickle.load(open("prediction_system_ml_app\heart_attack_trained_model.sav","rb"))
 
 
 
@@ -133,6 +133,7 @@ if (selected=='Calories Burnt Prediction'):
     st.success(calories_result)  
     st.markdown('**NOTE:** You can generate other sameple data using ChatGpt, Gemini or other preffered AI apps.')    
        
+
 
 
 
