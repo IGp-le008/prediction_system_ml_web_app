@@ -3,16 +3,6 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-# def load_model(filename):
-#     file_path = os.path.join(base_path, filename)
-#     with open(file_path, "rb") as file:
-#         return pickle.load(file)
-
-# calories_model = load_model("calories_burnt_trained_model.sav")
-# heartAttack_model = load_model("heart_attack_trained_model.sav")
-# diabetese_model = load_model("diabetese_trained_model.sav")
-
-#Loading the saved model
 diabetese_model = pickle.load(open('diabetese_trained_model.sav', 'rb'))
 
 heartAttack_model = pickle.load(open('heart_attack_trained_model.sav', 'rb'))
@@ -145,6 +135,7 @@ if (selected=='Calories Burnt Prediction'):
     st.success(calories_result)  
     st.markdown('**NOTE:** You can generate other sameple data using ChatGpt, Gemini or other preffered AI apps.')    
        
+
 
 
 
