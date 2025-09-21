@@ -12,7 +12,7 @@ calories_model = pickle.load(open('calories_burnt_trained_model.sav', 'rb'))
 #creating the side-bars
 with st.sidebar:
     selected=option_menu("Predcition System",
-                         ["Diabetese Prediction",
+                         ["Diabetes Prediction",
                           "Heart Attack Prediction",
                           "Calories Burnt Prediction"],
                          icons=['activity','heart','droplet'],
@@ -24,8 +24,8 @@ with st.sidebar:
 
 
 #Diabetese Prediction Page
-if (selected=='Diabetese Prediction'):
-    st.title('Diabetese Prediction using ML')
+if (selected=='Diabetes Prediction'):
+    st.title('Diabetes Prediction using ML')
     st.write('Sample data : {1,189,60,23,846,30.1,0.398,59}')
     st.write('Expected Output: 1 (The person is Diabetic.)')
     
@@ -43,7 +43,7 @@ if (selected=='Diabetese Prediction'):
     diabetese_diagnosis=''
     
     #creating a button to execute the prediction
-    if st.button("Disbetese Test Result"):
+    if st.button("Disbetes Test Result"):
         diabetese_prediction=diabetese_model.predict([[pregnencies,glucose,bloodPressure,skinThickness,insulin,bmi,diabetesePedigreeFunction,age]])
         if(diabetese_prediction[0]==1):
             diabetese_diagnosis="1 (The person is Diabetic)"
@@ -132,6 +132,7 @@ if (selected=='Calories Burnt Prediction'):
     st.success(calories_result)  
     st.markdown('**NOTE:** You can generate other sameple data using ChatGpt, Gemini or other preffered AI apps.')    
        
+
 
 
 
