@@ -1,4 +1,4 @@
-import pickle 
+timport pickle 
 import streamlit as st
 from streamlit_option_menu import option_menu
 
@@ -132,6 +132,7 @@ if (selected=='Calories Burnt Prediction'):
     st.success(calories_result)  
     st.markdown('**NOTE:** You can generate other sameple data using ChatGpt, Gemini or other preffered AI apps.')    
        
+
 
 
 
